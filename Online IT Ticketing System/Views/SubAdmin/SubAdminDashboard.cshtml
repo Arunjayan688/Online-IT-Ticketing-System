@@ -1,0 +1,108 @@
+﻿@model List<Online_IT_Ticketing_System.Models.TicketModel>
+
+@{
+    ViewData["Title"] = "SubAdmin Dashboard";
+}
+
+
+<div class="container">
+    <h1>SubAdmin Dashboard</h1>
+    <table class="table">
+        <thead>
+            <tr>
+                <th>Ticket ID</th>
+                <th>Username</th>
+                @* <th>Topic</th> *@
+                <th>Subject</th>
+                <th>Category</th>
+                <th>Creation Date</th>
+                <th>Attachment</th>
+                <th>Status</th>
+                <th>Message</th>
+               
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ticket in Model)
+            {
+                <tr>
+                    <td>@ticket.TicketId</td>
+                    <td>@ticket.UserName</td>
+                    @* <td>@ticket.Topic</td> *@
+                    <td>@ticket.Subject</td>
+                    <td>@ticket.Category</td>
+                    <td>@ticket.CreationDate.ToString("yyyy-MM-dd HH:mm:ss")</td>
+                    <td>
+                        @if (ticket.AttachmentData != null)
+                        {
+                            string base64Image = Convert.ToBase64String(ticket.AttachmentData);
+                            <div class="zoom-container">
+                                <img src="data:image/png;base64,@base64Image" alt="Attachment" class="img-thumbnail" />
+                            </div>
+                        }
+                        else
+                        {
+                            <span>No Attachment</span>
+                        }
+                    </td>
+                    
+                    <td> 
+                        <form method="post" action="@Url.Action("UpdateTicketStatus", "SubAdmin")"> 
+                             <input type="hidden" name="TicketId" value="@ticket.TicketId" /> 
+                             <select name="Status" class="form-select" onchange="this.form.submit()"> 
+                               @foreach (var status in new[] { "Open", "Processing", "Closed" }) 
+                               { 
+                                   if (status == ticket.Status) 
+                                  {
+                                       <option value="@status" selected>@status</option> 
+                                  } 
+                                  else 
+                                     { 
+                                       <option value="@status">@status</option>
+                                    } 
+                               } 
+                             </select> 
+
+                        </form>
+
+                    </td>
+                    <td>
+                        <!-- New Message Box -->
+                        <form method="post" action="@Url.Action("SendMessageToUser", "SubAdmin")">
+                            <input type="hidden" name="TicketId" value="@ticket.TicketId" />
+                            <input type="hidden" name="UserName" value="@ticket.UserName" />
+                            <textarea name="Message" class="form-control" rows="2" placeholder="Enter your message"></textarea>
+                            <button type="submit" class="btn btn-primary mt-2">Send</button>
+                        </form>
+                    </td>
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+<style>
+    body {
+        background-color: aliceblue;
+    }
+
+    .zoom-container {
+        position: relative;
+        display: inline-block;
+        cursor: zoom-in;
+    }
+
+        .zoom-container img {
+            max-width: 100px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .zoom-container:hover img {
+            transform: scale(7); /* Adjust scale factor for zoom level */
+            z-index: 1000;
+        }
+
+        .zoom-container:hover {
+            z-index: 1000;
+        }
+</style>

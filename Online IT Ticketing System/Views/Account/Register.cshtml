@@ -1,0 +1,138 @@
+﻿@model ITTicketingSystem.Models.RegisterViewModel
+
+@{
+    ViewData["Title"] = "Sign Up";
+}
+<div class="d-flex justify-content-center align-items-center" style="min-height: 90vh; margin-bottom: 50px;">
+    <div class="card shadow-lg p-4" style="width: 800px; border-radius: 10px;">
+        <h3 class="text-center mb-4">Sign Up</h3>
+        <form asp-action="Register" method="post">
+            @Html.AntiForgeryToken()
+            <div asp-validation-summary="All" class="text-danger"></div>
+
+            <div class="row">
+                <div class="col-md-6 mb-3">
+                    <label asp-for="FirstName" class="form-label"></label>
+                    <input asp-for="FirstName" class="form-control" />
+                    <span asp-validation-for="FirstName" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="LastName" class="form-label"></label>
+                    <input asp-for="LastName" class="form-control" />
+                    <span asp-validation-for="LastName" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="DateOfBirth" class="form-label"></label>
+                    <input asp-for="DateOfBirth" class="form-control" type="date" max="@DateTime.Now.ToString("yyyy-MM-dd")" />
+                    <span asp-validation-for="DateOfBirth" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Gender" class="form-label"></label>
+                    <select asp-for="Gender" class="form-control">
+                        <option value="Male">Male</option>
+                        <option value="Female">Female</option>
+                        <option value="Other">Other</option>
+                    </select>
+                    <span asp-validation-for="Gender" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="PhoneNumber" class="form-label"></label>
+                    <input asp-for="PhoneNumber" class="form-control" type="tel" maxlength="10" pattern="\d{10}" title="Phone number must be exactly 10 digits." />
+                    <span asp-validation-for="PhoneNumber" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Email" class="form-label"></label>
+                    <input asp-for="Email" class="form-control" type="email" />
+                    <span asp-validation-for="Email" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Address" class="form-label"></label>
+                    <input asp-for="Address" class="form-control" />
+                    <span asp-validation-for="Address" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="State" class="form-label"></label>
+                    <select asp-for="State" class="form-control" id="stateDropdown">
+                        <option value="">Select State</option>
+                        <option value="State1">State1</option>
+                        <option value="State2">State2</option>
+                        <option value="State3">State3</option>
+                    </select>
+                    <span asp-validation-for="State" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="City" class="form-label"></label>
+                    <select asp-for="City" class="form-control" id="cityDropdown">
+                        <option value="">Select City</option>
+                        <option value="City">City1</option>
+                        <option value="City">City2</option>
+                        <option value="City">City3</option>
+                    </select>
+                    <span asp-validation-for="City" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Username" class="form-label"></label>
+                    <input asp-for="Username" class="form-control" />
+                    <span asp-validation-for="Username" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="Password" class="form-label"></label>
+                    <input asp-for="Password" class="form-control" type="password" />
+                    <span asp-validation-for="Password" class="text-danger"></span>
+                </div>
+
+                <div class="col-md-6 mb-3">
+                    <label asp-for="ConfirmPassword" class="form-label"></label>
+                    <input asp-for="ConfirmPassword" class="form-control" type="password" />
+                    <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+                </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary w-100 mt-3">Register</button>
+        </form>
+    </div>
+</div>
+
+<script>
+    // Disable future dates for the date picker
+    document.addEventListener("DOMContentLoaded", function () {
+        const dobInput = document.getElementById("DateOfBirth");
+        if (dobInput) {
+            dobInput.max = new Date().toISOString().split("T")[0];
+        }
+    });
+
+    // Populate cities based on state selection
+    function populateCities() {
+        const state = document.getElementById("stateDropdown").value;
+        const cityDropdown = document.getElementById("cityDropdown");
+        cityDropdown.innerHTML = '<option value="">Select City</option>'; // Reset city dropdown
+
+        const stateCityMap = {
+            Kerala: ["Thiruvananthapuram", "Kochi", "Kozhikode", "Thrissur"],
+            "Tamil Nadu": ["Chennai", "Coimbatore", "Madurai", "Tiruchirappalli"],
+            Delhi: ["New Delhi", "South Delhi", "West Delhi", "North Delhi"],
+            Maharashtra: ["Mumbai", "Pune", "Nagpur", "Nashik"],
+            Karnataka: ["Bengaluru", "Mysuru", "Mangaluru", "Hubli"]
+        };
+
+        if (state && stateCityMap[state]) {
+            stateCityMap[state].forEach(city => {
+                const option = document.createElement("option");
+                option.value = city;
+                option.textContent = city;
+                cityDropdown.appendChild(option);
+            });
+        }
+    }
+</script>

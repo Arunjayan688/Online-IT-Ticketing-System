@@ -1,0 +1,47 @@
+﻿
+@model TicketModel
+
+<div class="container">
+    <h1>Create a New Ticket</h1>
+    <form asp-action="CreateTicket" method="post" enctype="multipart/form-data">
+        <input type="hidden" id="UserName" name="UserName" value="@Model.UserName" />
+
+        <div class="form-group">
+            <label for="Topic">Topic:</label>
+            <input type="text" id="Topic" name="Topic" class="form-control" value="@Model.Topic" required />
+            <span asp-validation-for="Topic" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Subject">Subject:</label>
+            <textarea id="Subject" name="Subject" class="form-control" rows="4" required>@Model.Subject</textarea>
+            <span asp-validation-for="Subject" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label for="Category">Category:</label>
+            <select id="Category" name="Category" class="form-control" required>
+                <option value="">Select a category</option>
+                <option value="Hardware">Hardware</option>
+                <option value="Software">Software</option>
+                <option value="SystemAdmin">System Administration</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="AttachmentPath">Upload Image:</label>
+            <input type="file" id="AttachmentPath" name="AttachmentPath" class="form-control" accept="image/*" />
+            <span asp-validation-for="AttachmentPath" class="text-danger"></span>
+
+            @if (Model.AttachmentData != null)
+            {
+                string base64Image = Convert.ToBase64String(Model.AttachmentData);
+                <img src="data:image/png;base64,@base64Image" alt="Attachment" class="img-thumbnail" style="max-width: 200px;" />
+            }
+        </div>
+        <br />
+
+        <button type="submit" class="btn btn-primary">Create Ticket</button>
+        <a class="btn btn-secondary" href="@Url.Action("MyTickets", "Tickets")">My Tickets</a>
+    </form>
+</div>

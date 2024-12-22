@@ -1,0 +1,111 @@
+﻿@model List<TicketModel>
+
+@{
+    ViewData["Title"] = "View All Tickets";
+}
+
+<div class="container mt-5">
+    <h1>All Tickets</h1>
+    <table class="table" border="5">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>UserName</th>
+                <th>Description </th>
+                <th>Image</th>
+                <th>Status</th>
+                <th>Assigned To</th>
+                <th>Actions</th>
+                <th>Message</th>
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var ticket in Model)
+            {
+                <tr>
+                    <td>@ticket.Category</td>
+                    <td>@ticket.UserName</td>
+                    <td>@ticket.Subject</td>
+                    <td>
+                        @if (ticket.AttachmentData != null)
+                        {
+                            string base64Image = Convert.ToBase64String(ticket.AttachmentData);
+                            <div class="zoom-container">
+                                <img src="data:image/png;base64,@base64Image" alt="Attachment" class="img-thumbnail" />
+                            </div>
+                        }
+                        else
+                        {
+                            <span>No Attachment</span>
+                        }
+                    </td>
+                    <td>
+                        <form method="post" action="@Url.Action("UpdateTicketStatus", "SuperAdmin")">
+                            <input type="hidden" name="TicketId" value="@ticket.TicketId" />
+                            <select name="Status" class="form-select" onchange="this.form.submit()">
+                                @foreach (var status in new[] { "Open", "Processing", "Closed" })
+                                {
+                                    if (status == ticket.Status)
+                                    {
+                                        <option value="@status" selected>@status</option>
+                                    }
+                                    else
+                                    {
+                                        <option value="@status">@status</option>
+                                    }
+                                }
+                            </select>
+
+                        </form>
+                    </td>
+                    <td>@ticket.AssignedTo</td>
+                    <td>
+                        <a href="@Url.Action("AssignTicket", "SuperAdmin", new { TicketId = ticket.TicketId })" class="btn btn-warning">Assign</a>
+                    </td>
+                    <td>
+                        <!-- New Message Box -->
+                        <form method="post" action="@Url.Action("SendMessageToUser", "SuperAdmin")">
+                            <input type="hidden" name="TicketId" value="@ticket.TicketId" />
+                            <input type="hidden" name="UserName" value="@ticket.UserName" />
+                            <textarea name="Message" class="form-control" rows="2" placeholder="Enter your message"></textarea>
+                            <button type="submit" class="btn btn-primary mt-2">Send</button>
+                        </form>
+                    </td>
+                   
+                </tr>
+            }
+        </tbody>
+    </table>
+</div>
+
+<a href="@Url.Action("SuperAdminDashboard", "SuperAdmin")" class="btn btn-primary ">Back</a>
+<br />
+<br />
+
+<style>
+    body {
+        background-color: aliceblue;
+    }
+
+  
+    .zoom-container {
+        position: relative;
+        display: inline-block;
+        cursor: zoom-in;
+    }
+
+    .zoom-container img {
+        max-width: 100px;
+        transition: transform 0.2s ease-in-out;
+    }
+
+    .zoom-container:hover img {
+        transform: scale(5); /* Adjust scale factor for zoom level */
+        z-index: 1000;
+    }
+
+    .zoom-container:hover {
+        z-index: 1000;
+    }
+
+</style>

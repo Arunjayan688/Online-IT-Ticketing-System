@@ -1,0 +1,43 @@
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\appsettings.Development.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\appsettings.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\Online IT Ticketing System.staticwebassets.runtime.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\Online IT Ticketing System.staticwebassets.endpoints.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\Online IT Ticketing System.exe
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\Online IT Ticketing System.deps.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\Online IT Ticketing System.runtimeconfig.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\Online IT Ticketing System.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\Online IT Ticketing System.pdb
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\BCrypt.Net-Next.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\System.Data.SqlClient.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\runtimes\win-arm64\native\sni.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\runtimes\win-x64\native\sni.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\runtimes\win-x86\native\sni.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\runtimes\unix\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\bin\Release\net8.0\runtimes\win\lib\net8.0\System.Data.SqlClient.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.csproj.AssemblyReference.cache
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.AssemblyInfoInputs.cache
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.AssemblyInfo.cs
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.csproj.CoreCompileInputs.cache
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.MvcApplicationPartsAssemblyInfo.cache
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.RazorAssemblyInfo.cache
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.RazorAssemblyInfo.cs
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\scopedcss\Views\Shared\_Layout.cshtml.rz.scp.css
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\scopedcss\bundle\Online IT Ticketing System.styles.css
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\scopedcss\projectbundle\Online IT Ticketing System.bundle.scp.css
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets.build.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets.development.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets.build.endpoints.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets\msbuild.Online IT Ticketing System.Microsoft.AspNetCore.StaticWebAssets.props
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets\msbuild.Online IT Ticketing System.Microsoft.AspNetCore.StaticWebAssetEndpoints.props
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets\msbuild.build.Online IT Ticketing System.props
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets\msbuild.buildMultiTargeting.Online IT Ticketing System.props
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets\msbuild.buildTransitive.Online IT Ticketing System.props
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets.pack.json
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\staticwebassets.upToDateCheck.txt
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online I.AA1CD535.Up2Date
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\refint\Online IT Ticketing System.dll
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.pdb
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\Online IT Ticketing System.genruntimeconfig.cache
+C:\Users\arunj\Downloads\Online IT Ticketing System\Online IT Ticketing System\Online IT Ticketing System\obj\Release\net8.0\ref\Online IT Ticketing System.dll
